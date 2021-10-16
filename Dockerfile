@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16.1.0-stretch-slim
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -15,5 +15,5 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 
+EXPOSE 3000
 CMD [ "node", "bin/www" ]
